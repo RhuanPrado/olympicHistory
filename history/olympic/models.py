@@ -27,3 +27,7 @@ class Game(models.Model):
 class Year(models.Model):
     id_year = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     year    = models.IntegerField()
+
+class ParticipationGame(models.Model):
+    id_game   = models.UUIDField()
+    id_person = models.UUIDField()
